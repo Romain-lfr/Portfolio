@@ -44,12 +44,8 @@
                             <li><a href="#" class="scroll-link" data-id="about">Skill</a></li>
                             <li><a href="#" class="scroll-link" data-id="blog">Projects</a></li>
                             <li><a href="#" class="scroll-link" data-id="contact-us">Contact me</a></li>
+                            <li><a href="index.html">Français</a></li>
                         </ul>
-                        <div class="button r" id="button-3">
-                            <input type="checkbox" class="checkbox" />
-                            <div class="knobs"></div>
-                            <div class="layer"></div>
-                        </div>
                     </div>
                     <!--/.navbar-collapse-->
                 </nav>
@@ -76,7 +72,7 @@
             <div class="container">
                 <div class="col-md-4 text-end profile-box">
                     <img src="img/0.jpg" alt="Photo de profil">
-                    <a href="/img/CV_Lefranc_Romain.pdf" class="btn btn-primary mt-2" download>Download CV</a>
+                    <a href="/img/CV_2025-10-22_Romain_Lefranc.pdf" class="btn btn-primary mt-2" download>Download CV</a>
                 </div>
                 <div class="col-md-8">
                     <section class="design-section">
@@ -436,6 +432,16 @@
                             <img src="./img/JavaScript.png" alt="javascript">
                         </div>
                     </div>
+                    <div class="gallery-item dev">
+                        <div class="gallery-item-inner">
+                            <img src="./img/godot.png" alt="godot">
+                        </div>
+                    </div>
+                    <div class="gallery-item web">
+                        <div class="gallery-item-inner">
+                            <img src="./img/Php.png" alt="php">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -521,6 +527,7 @@
                             </section>
                         </div>
                     </div>
+                    <!--
                     <div class="interet">
                         <div class="tabulation present" data-target="centre1"><a>Sport</a></div>
                         <div class="tabulation" data-target="centre2"><a>Music</a></div>
@@ -571,6 +578,7 @@
                             <div class="photo-title">Mixology</div>
                         </div>
                     </div>
+                -->
                 </div>
             </div>
         </div>
@@ -655,25 +663,6 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", () => {
-        const checkbox = document.querySelector(".checkbox");
-
-        // Ajoute une classe au body pour styliser selon la langue
-        if (window.location.href.includes("index_en.html")) {
-            document.body.classList.add("en");
-            checkbox.checked = true;
-        } else {
-            document.body.classList.remove("en");
-        }
-
-        checkbox.addEventListener("change", () => {
-            if (checkbox.checked) {
-                window.location.href = "index_en.html";
-            } else {
-                window.location.href = "index.html";
-            }
-        });
-    });
 
     $(document).ready(function() {
         // navigation click actions 

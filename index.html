@@ -44,12 +44,8 @@
                                 <li><a href="#" class="scroll-link" data-id="about">Compétences</a></li>
                                 <li><a href="#" class="scroll-link" data-id="blog">Projets</a></li>
                                 <li><a href="#" class="scroll-link" data-id="contact-us">Me contacter</a></li>
+                                <li><a href="index_en.html">English</a></li>
                             </ul>
-                            <div class="button r" id="button-3">
-                                <input type="checkbox" class="checkbox" />
-                                <div class="knobs"></div>
-                                <div class="layer"></div>
-                            </div>
                         </div>
                         <!--/.navbar-collapse-->
                     </nav>
@@ -435,6 +431,16 @@
                                 <img src="./img/JavaScript.png" alt="javascript">
                             </div>
                         </div>
+                        <div class="gallery-item dev">
+                            <div class="gallery-item-inner">
+                                <img src="./img/godot.png" alt="godot">
+                            </div>
+                        </div>
+                        <div class="gallery-item web">
+                            <div class="gallery-item-inner">
+                                <img src="./img/Php.png" alt="php">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -512,7 +518,7 @@
                         </div>
 
                         
-                        
+                        <!--
                         <div class="interet">
                             <div class="tabulation present" data-target="centre1"><a>Sport</a></div>
                             <div class="tabulation" data-target="centre2"><a>Musique</a></div>
@@ -563,6 +569,7 @@
                                 <div class="photo-title">Mixologie</div>
                             </div>
                         </div>
+                        -->
                     </div>
                 </div>
             </div>
@@ -659,26 +666,6 @@
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
         <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", () => {
-                const checkbox = document.querySelector(".checkbox");
-
-                // Ajoute une classe au body pour styliser selon la langue
-                if (window.location.href.includes("index_en.html")) {
-                    document.body.classList.add("en");
-                    checkbox.checked = true;
-                } else {
-                    document.body.classList.remove("en");
-                }
-
-                checkbox.addEventListener("change", () => {
-                    if (checkbox.checked) {
-                        window.location.href = "index_en.html";
-                    } else {
-                        window.location.href = "index.html";
-                    }
-                });
-            });
-
             $(document).ready(function() {
                 // navigation click actions 
                 $('.scroll-link').on('click', function(event){
