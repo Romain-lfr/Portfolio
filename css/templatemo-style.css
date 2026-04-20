@@ -661,7 +661,7 @@ body.en .timeline-content a:link {
 	padding-top: 200px;
 	padding-bottom: 200px;
 	background-color: #33c1cf;
-	height: 732px;
+	height: 80svh;
 	margin-left: -100vh;
 	padding-left: 100vh;
 }
@@ -754,7 +754,7 @@ body.en .timeline-content a:link {
 	padding-top: 60px;
 	padding-bottom: 60px;
 	background-color: rgba(0, 0, 0, 0.5);
-	height: 582px;
+	height: 70svh;
 	margin-left: -100vh;
 	padding-left: 100vh;
 	overflow: hidden!important;
