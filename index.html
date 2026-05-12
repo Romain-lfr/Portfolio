@@ -56,6 +56,7 @@
             
         </header>
         <main>
+
             <div class="parallax-content baner-content" id="home">
                 <div class="container">
                     <div class="text-content">
@@ -75,41 +76,132 @@
                         <a href="/img/CV_Lefranc_Romain.pdf" class="btn btn-primary mt-2" download>Télécharger CV</a>
                     </div>
                     <div class="col-md-8">
-                        <section class="design-section">
-                            <div class="timeline">
-                                <div class="timeline-empty">
+                        <div class="parcours-tabs">
+                            <div class="parcours-tabs-btns">
+                                <button class="parcours-btn active" onclick="switchParcours('formation', this)">
+                                    <span>
+                                    </span> Formation
+                                </button>
+                                <button class="parcours-btn" onclick="switchParcours('experience', this)">
+                                    <span></span> Expérience
+                                </button>
+                                <button class="parcours-btn" onclick="switchParcours('benevolat', this)">
+                                    <span></span> Bénévolat
+                                </button>
+                            </div>
+
+                            <!-- FORMATION -->
+                            <div id="parcours-formation" class="parcours-content active">
+                                <div class="parcours-card">
+                                    <div class="parcours-card-year"><span>2024 – 2027</span></div>
+                                    <div class="parcours-card-body">
+                                        <h3>BUT Informatique</h3>
+                                        <a href="https://iut-lannion.univ-rennes.fr/" target="_blank">IUT de Lannion – Université de Rennes</a>
+                                        <p>Formation axée sur le développement, les bases de données et la gestion de projets informatiques.</p>
+                                    </div>
                                 </div>
-                                <div class="timeline-middle">
-                                    <div class="timeline-circle"></div>
-                                </div>
-                                <div class="timeline-component timeline-content">
-                                    <h3>BUT Informatique</h3>
-                                    <a href="https://iut-lannion.univ-rennes.fr/">IUT Lannion <br> 2024 - 2027</a>
-                                </div>
-                                <div class="timeline-component timeline-content">
+                                <div class="parcours-card">
+                                    <div class="parcours-card-year"><span>2021 – 2024</span></div>
+                                    <div class="parcours-card-body">
                                         <h3>BAC STI2D</h3>
-                                        <a href="https://lycee-brequigny.fr/">Lycée Bréquigny - Rennes 
-                                        <br> 2021 - 2024</a>
+                                        <a href="https://lycee-brequigny.fr/" target="_blank">Lycée Bréquigny – Rennes</a>
+                                        <p>Sciences et Technologies de l'Industrie et du Développement Durable.</p>
+                                    </div>
                                 </div>
-                                <div class="timeline-middle">
-                                    <div class="timeline-circle"></div>
+                                <div class="parcours-card">
+                                    <div class="parcours-card-year"><span>2017 – 2021</span></div>
+                                    <div class="parcours-card-body">
+                                        <h3>DNB – Collège</h3>
+                                        <a href="https://www.collegejeanmonnet-janze.ac-rennes.fr/" target="_blank">Jean-Monnet – Janzé</a>
+                                        <p>Diplôme National du Brevet.</p>
+                                    </div>
                                 </div>
-                                <div class="timeline-empty">
-                                </div>
+                            </div>
 
-                                <div class="timeline-empty">
+                            <!-- EXPÉRIENCE -->
+                            <div id="parcours-experience" class="parcours-content">
+                                <div class="parcours-card">
+                                    <div class="parcours-card-year"><span>Avr. – Juin 2026</span></div>
+                                    <div class="parcours-card-body">
+                                        <h3>Stage – Bases de données vectorielles</h3>
+                                        <a href="#" target="_blank">FIIT STU Slovakia – Bratislava</a>
+                                        <ul>
+                                            <li>Extraction, découpage et vectorisation de contrats PDF pour les rendre exploitables.</li>
+                                            <li>Étude comparative de différentes BDD vectorielles selon la performance et le filtrage.</li>
+                                        </ul>
+                                    </div>
                                 </div>
-
-                                <div class="timeline-middle">
-                                    <div class="timeline-circle"></div>
+                                <div class="parcours-card">
+                                    <div class="parcours-card-year"><span>Juil. – Août 2025</span></div>
+                                    <div class="parcours-card-body">
+                                        <h3>Location vélo</h3>
+                                        <a href="https://www.veloodelaforet.fr/" target="_blank">Véloo de la Forêt - Sable d'olonne</a>
+                                        <ul>
+                                            <li>Relation client et conseil.</li>
+                                            <li>Gestion de caisse.</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class=" timeline-component timeline-content">
-                                    <h3>DNB - Collège</h3>
-                                    <a href="https://www.collegejeanmonnet-janze.ac-rennes.fr/">Jean-Monnet - Janze 
-                                    <br> 2017 - 2021</a>
+                                <div class="parcours-card">
+                                    <div class="parcours-card-year"><span>Juil. – Août 2025</span></div>
+                                    <div class="parcours-card-body">
+                                        <h3>Plongeur | Préparateur Entrées Desserts</h3>
+                                        <a href="https://fr.restaurantguru.com/la-gargote-Olonne-sur-Mer">Restaurant La Fleur de Sel - Sable d'olonne</a>
+                                        <ul>
+                                            <li>Travail en équipe en environnement de restauration.</li>
+                                            <li>Préparation des entrées et desserts.</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div> 
-                        </section>
+                            </div>
+                            <!-- BÉNÉVOLAT -->
+                            <div id="parcours-benevolat" class="parcours-content">
+                                <div class="parcours-card">
+                                    <div class="parcours-card-year"><span>Dec 2025 - Ajr</span></div>
+                                    <div class="parcours-card-body">
+                                        <h3>Vice-président / Trésorier -  Inter-Asso</h3>
+                                        <a href="https://inter-asso.fr/" target="_blank">Inter-Asso - IUT Lannion</a>
+                                        <ul>
+                                            <li>Coordination des associations de l'IUT</li>
+                                            <li>Gestion des finances de l'association et des événements de Lannion</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="parcours-card">
+                                    <div class="parcours-card-year"><span>Sept 2025 - Ajr</span></div>
+                                    <div class="parcours-card-body">
+                                        <h3>Vice-président -  BDE INFO</h3>
+                                        <a href="https://alive.inter-asso.fr/">Alive - IUT Lannion</a>
+                                        <ul>
+                                            <li>Coordination des événements du BDE INFO</li>
+                                            <li>Gestion administrative et logistique</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="parcours-card">
+                                    <div class="parcours-card-year"><span>Sept 2025 - Ajr</span></div>
+                                    <div class="parcours-card-body">
+                                        <h3>Trésorier -  BPM</h3>
+                                        <a href="https://www.gralon.net/mairies-france/cotes-d-armor/association-beat-per-minute-bpm-lannion_W223000719.htm">BPM - IUT Lannion</a>
+                                        <ul>
+                                            <li>Gestion des finances de l'association</li>
+                                            <li>Location de matériel de musique</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="parcours-card">
+                                    <div class="parcours-card-year"><span>Juin 2025 - Ajr</span></div>
+                                    <div class="parcours-card-body">
+                                        <h3>Croix Rouge - Social</h3>
+                                        <a href="https://www.croix-rouge.fr/unite-locale-de-rennes">Croix Rouge - Rennes</a>
+                                        <ul>
+                                            <li>Distribution d'aliments aux personnes dans le besoin</li>
+                                            <li>Récolte de dons pour les événements de solidarité</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -467,6 +559,7 @@
                                         <li><a href="#tab4">Ligue 1</a></li>
                                         <li><a href="#tab5">Alizon</a></li>
                                         <li><a href="#tab6">VolleyData</a></li>
+                                        <li><a href="#tab7">Vector BDD</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -518,6 +611,14 @@
                                             <h4>VolleyData</h4>
                                             <span><a href="#">IUT Lannion</a> / <a href="#"> PHP - JS - Code Igniter - DBLP </a> / <a href="#"> Février 2026 </a></span>
                                             <p>Visualisation et Normalisation de données récupérées des via l'API DBLP</p>
+                                        </div>
+                                    </div>
+                                    <div id="tab7">
+                                        <a href="https://github.com/Romain-lfr/R4.C.10-Analyse-Volley"><img src="img/vector.webp" alt="Vector BDD" style="height: 50svh; width: auto;"></a>
+                                        <div class="text-content">
+                                            <h4>Études de base de données vectorielles</h4>
+                                            <span><a href="#">FIIT STU - Slovaquie </a> / <a href="#"> Python </a> / <a href="#"> Mai 2026 </a></span>
+                                            <p>Étude comparative différentes BDD selon la performance et le filtrage</p>
                                         </div>
                                     </div>
                                 </section>
@@ -652,7 +753,7 @@
                             <ul>
                                 <li><a href="https://www.linkedin.com/in/romain-lefranc-723712354/"><i class="fa fa-linkedin"></i></a></li>
                                 <li><a href="https://github.com/Romain-lfr"><i class="fa fa-github"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="https://www.instagram.com/romain__lfr/"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -790,6 +891,13 @@
                     });
                 });
             });
+
+            function switchParcours(id, btn) {
+                document.querySelectorAll('.parcours-content').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.parcours-btn').forEach(b => b.classList.remove('active'));
+                document.getElementById('parcours-' + id).classList.add('active');
+                btn.classList.add('active');
+            }
         </script>
     </body>
 
