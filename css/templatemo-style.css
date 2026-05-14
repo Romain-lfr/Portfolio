@@ -307,9 +307,7 @@ body.en #button-3 {
     position: relative;
     float: right;
     padding: 9px 10px;
-    margin-top: 15px!important;
     margin-right: 15px;
-    margin-bottom: 8px;
     background-color: transparent;
     background-image: none;
     border: 1px solid transparent;
@@ -1949,8 +1947,8 @@ footer .connect-us ul li a:hover {
 }
 
 .parcours-card-year {
-  min-width: 110px;
-  text-align: right;
+  min-width: 14svh;
+  text-align: center;
   font-size: 1.4svh;
   font-weight: 800;
   letter-spacing: 0.5px;
@@ -2055,4 +2053,274 @@ footer .connect-us ul li a:hover {
 
 .parcours-content {
   min-height: 260px;
+}
+
+/* ===== RESPONSIVE PARCOURS ===== */
+
+/* Tablette et moins */
+@media (max-width: 991px) {
+  .ton-content {
+    min-height: unset;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    display: block;
+  }
+
+  .ton-content .container {
+    display: block;
+  }
+
+  .col-md-4.profile-box {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .col-md-4.profile-box img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+  }
+
+  .col-md-8 {
+    width: 100%;
+  }
+
+  .parcours-tabs {
+    padding: 0 15px 20px;
+  }
+
+  .parcours-tabs-btns {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .profile-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-box img {
+  background: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 0;       /* supprime le 3em */
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+body.en .profile-box img {
+  background: linear-gradient(90deg, #2d0cce,#099e85,#01d319);
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 0;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .ton-content {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  .col-md-4.profile-box img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .parcours-btn {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .parcours-card {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .parcours-card-year {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+    padding: 8px 14px;
+	justify-content: center;
+    font-size: 12px;
+  }
+
+  .parcours-card-body {
+    border-radius: 0 0 8px 8px;
+	min-width: 100%;      
+  }
+
+  .parcours-card-body h3 {
+    font-size: 14px;
+  }
+}
+
+/* ================================================== */
+/* STYLES SECTION COMPÉTENCES                         */
+/* Ajouter à la fin de templatemo-style.css           */
+/* ================================================== */
+
+/* --- Section wrapper --- */
+.comp-section {
+    padding: 120px 0 80px;
+    background-image: url(../img/about-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* --- Grille 2 colonnes sur desktop --- */
+.comp-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* --- Bloc individuel --- */
+.comp-block {
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 14px;
+    padding: 24px 26px;
+    border-left: 3px solid #F27121;
+    /* fallback, le dégradé est appliqué via pseudo-élément */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.comp-block::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #F27121, #E94057, #8A2387);
+    border-radius: 3px 0 0 3px;
+}
+
+.comp-block:hover {
+    background: rgba(0, 0, 0, 0.85);
+    transform: translateY(-4px);
+}
+
+/* --- Header du bloc --- */
+.comp-block-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.comp-block-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.comp-block-icon img {
+    filter: brightness(0) invert(1);
+}
+
+.comp-block-title {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 0 0 3px 0;
+}
+
+.comp-block-sub {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* --- Ligne de compétence --- */
+.skill-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+
+.skill-row:last-child {
+    margin-bottom: 0;
+}
+
+.skill-label {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.skill-right {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+/* --- Points de niveau --- */
+.level-dots {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    flex-shrink: 0;
+}
+
+.dot.on {
+    background: linear-gradient(45deg, #F27121, #E94057);
+}
+
+.level-tag {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.35);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-left: 10px;
+    min-width: 78px;
+    text-align: right;
+}
+
+/* --- Responsive --- */
+@media (max-width: 991px) {
+    .comp-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .comp-section {
+        padding: 80px 0 60px;
+    }
+    .comp-block {
+        padding: 18px 16px;
+    }
+    .level-tag {
+        display: none;
+    }
 }
