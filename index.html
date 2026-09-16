@@ -21,6 +21,176 @@
         <link rel="stylesheet" href="css/lightbox.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+        <style>
+        /* ===== Bloc "Services" — renvoie vers services.html ===== */
+        .svc-teaser {
+            background: linear-gradient(135deg, #1e2025 0%, #2a2d34 100%);
+            padding: 110px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .svc-teaser::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+        }
+        .svc-teaser-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+        .svc-teaser-text { flex: 1 1 420px; min-width: 300px; }
+        .svc-teaser-eyebrow {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #f7c552;
+            margin-bottom: 14px;
+        }
+        .svc-teaser-text h3 {
+            color: #fff;
+            font-size: 34px;
+            font-weight: 800;
+            line-height: 1.25;
+            margin: 0 0 18px;
+        }
+        .svc-teaser-text p {
+            color: rgba(255,255,255,.78);
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 520px;
+            margin: 0 0 32px;
+        }
+        .svc-teaser-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #f7c552;
+            color: #21272c !important;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 16px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: transform .3s ease, box-shadow .3s ease;
+            box-shadow: 0 12px 26px rgba(247,197,82,.25);
+        }
+        .svc-teaser-btn:hover, .svc-teaser-btn:focus {
+            transform: translateY(-3px);
+            color: #21272c !important;
+            text-decoration: none;
+            box-shadow: 0 16px 32px rgba(247,197,82,.35);
+        }
+
+        /* Pile de photos qui tournent — "mes sites" */
+        .svc-teaser-showcase {
+            position: relative;
+            flex: 0 0 380px;
+            width: 380px;
+            height: 300px;
+        }
+        .svc-slide {
+            position: absolute;
+            inset: 0;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 18px 40px rgba(0,0,0,.45);
+            border: 4px solid #fff;
+            animation: svcStackRotate 9s ease-in-out infinite;
+            animation-fill-mode: both;
+        }
+        .svc-teaser-showcase:hover .svc-slide { animation-play-state: paused; }
+        .svc-slide:nth-child(1) { animation-delay: 0s; }
+        .svc-slide:nth-child(2) { animation-delay: -3s; }
+        .svc-slide:nth-child(3) { animation-delay: -6s; }
+        .svc-slide a {
+            display: block;
+            width: 100%; height: 100%;
+            position: relative;
+        }
+        .svc-slide a:focus-visible {
+            outline: 2px solid #f7c552;
+            outline-offset: -2px;
+        }
+        .svc-slide img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .5s ease;
+        }
+        .svc-slide a:hover img, .svc-slide a:focus img { transform: scale(1.06); }
+        .svc-slide-label {
+            position: absolute;
+            left: 14px; bottom: 14px;
+            background: rgba(20,20,24,.75);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .5px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+            transition: opacity .25s ease;
+        }
+        .svc-slide-hint {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: rgba(20,20,24,0);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+            opacity: 0;
+            transition: opacity .3s ease, background .3s ease;
+        }
+        .svc-slide a:hover .svc-slide-hint,
+        .svc-slide a:focus .svc-slide-hint {
+            opacity: 1;
+            background: rgba(20,20,24,.55);
+        }
+        .svc-slide a:hover .svc-slide-label,
+        .svc-slide a:focus .svc-slide-label {
+            opacity: 0;
+        }
+        @keyframes svcStackRotate {
+            0%      { transform: translate(0,0) scale(1) rotate(0deg); z-index: 3; }
+            33.333% { transform: translate(-18px, 10px) scale(.9) rotate(-6deg); z-index: 2; }
+            66.666% { transform: translate(18px, 10px) scale(.9) rotate(6deg); z-index: 1; }
+            100%    { transform: translate(0,0) scale(1) rotate(0deg); z-index: 3; }
+        }
+
+        @media (max-width: 991px) {
+            .svc-teaser-inner { flex-direction: column; text-align: center; }
+            .svc-teaser-text { text-align: center; }
+            .svc-teaser-text p { margin-left: auto; margin-right: auto; }
+            .svc-teaser-showcase { flex-basis: 100%; width: 100%; max-width: 380px; margin: 20px auto 0; }
+        }
+        @media (max-width: 480px) {
+            .svc-teaser-showcase { height: 240px; }
+            .svc-teaser-text h3 { font-size: 26px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .svc-slide { animation: none; }
+            .svc-slide:nth-child(1) { transform: translate(0,0) scale(1) rotate(0deg); z-index: 3; }
+            .svc-slide:nth-child(2) { transform: translate(-18px, 10px) scale(.9) rotate(-6deg); z-index: 2; }
+            .svc-slide:nth-child(3) { transform: translate(18px, 10px) scale(.9) rotate(6deg); z-index: 1; }
+        }
+        </style>
     </head>
     <body>
         <header>
@@ -43,6 +213,7 @@
                                 <li><a href="#" class="scroll-link" data-id="parcour">Parcours</a></li>
                                 <li><a href="#" class="scroll-link" data-id="about">Compétences</a></li>
                                 <li><a href="#" class="scroll-link" data-id="blog">Projets</a></li>
+                                <li><a href="#" class="scroll-link" data-id="services-teaser">Services</a></li>
                                 <li><a href="#" class="scroll-link" data-id="contact-us">Me contacter</a></li>
                                 <li><a href="index_en.html">English</a></li>
                             </ul>
@@ -61,7 +232,7 @@
                 <div class="container">
                     <div class="text-content">
                         <h2><em>Portfolio</em><span> Lefranc</span> Romain</h2>
-                        <p>Étudiant en troisième année de BUT Informatique à l'IUT de Lannion, je recherche une alternance dans le domaines de l’exploitation de données et/ou Web développeur. </p>
+                        <p>Étudiant en deuxième année de BUT Informatique à l'IUT de Lannion, je recherche une alternance dans le domaines de l’exploitation de données et/ou Web développeur. </p>
                         <div class="primary-button">
                             <a href="#" class="scroll-link" data-id="parcour">C'est parti</a>
                         </div>
@@ -1039,6 +1210,43 @@
             </div>            
             -->
             
+            <!-- SERVICES -->
+            <section class="svc-teaser" id="services-teaser">
+                <div class="container">
+                    <div class="svc-teaser-inner">
+                        <div class="svc-teaser-text">
+                            <span class="svc-teaser-eyebrow">Développement web</span>
+                            <h3>Besoin d'un site web pour votre activité ?</h3>
+                            <p>Je conçois et développe des sites vitrines, portfolios et applications sur mesure, avec un accompagnement clair de l'idée à la mise en ligne.</p>
+                            <a href="services.html" class="svc-teaser-btn">Découvrir mes services <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                        <div class="svc-teaser-showcase">
+                            <div class="svc-slide">
+                                <a href="https://Romainlfr.github.io" target="_blank" rel="noopener">
+                                    <img src="img/jo.jpg" alt="Aperçu du site JO 2024">
+                                    <span class="svc-slide-hint">Voir le site <i class="fa fa-external-link"></i></span>
+                                    <span class="svc-slide-label">JO 2024</span>
+                                </a>
+                            </div>
+                            <div class="svc-slide">
+                                <a href="#blog">
+                                    <img src="img/Alizon.png" alt="Aperçu du site Alizon">
+                                    <span class="svc-slide-hint">Voir le projet <i class="fa fa-external-link"></i></span>
+                                    <span class="svc-slide-label">Alizon</span>
+                                </a>
+                            </div>
+                            <div class="svc-slide">
+                                <a href="https://alive.inter-asso.fr/" target="_blank" rel="noopener">
+                                    <img src="img/equipe.jpg" alt="Aperçu du site BDE INFO">
+                                    <span class="svc-slide-hint">Voir le site <i class="fa fa-external-link"></i></span>
+                                    <span class="svc-slide-label">BDE INFO</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <div id="contact-us">
                 <div class="container">
                     <div class="section-heading">
@@ -1073,7 +1281,7 @@
                     <div class="col-md-4 col-sm-12">
                         <div class="logo">
                             <a class="logo-ft scroll-top"><em>L</em>efranc <em>R</em>omain</a>
-                            <p>Etudiant 3ème année en BUT Informatique
+                            <p>Etudiant 2ème année en BUT Informatique
                         <br>IUT Lannion</p>
                         </div>
                     </div>
@@ -1274,4 +1482,3 @@
     </body>
 
 </html>
-
