@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Services - Lefranc Romain</title>
-        <meta name="description" content="Création de sites web sur mesure : sites vitrines, portfolios, applications. Accompagnement de l'idée à la mise en ligne. Devis gratuit.">
+        <meta name="description" content="Custom website development: showcase sites, portfolios, web applications. Support from concept to launch. Free quote.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
@@ -48,7 +48,7 @@
             text-underline-offset: 5px;
         }
 
-        /* ---- Apparition au scroll ---- */
+        /* ---- Reveal on scroll ---- */
         .svc-reveal {
             opacity: 0;
             transform: translateY(22px);
@@ -56,7 +56,7 @@
         }
         .svc-reveal.is-visible { opacity: 1; transform: translateY(0); }
 
-        /* ---- Étiquette "eyebrow" ---- */
+        /* ---- "Eyebrow" label ---- */
         .svc-eyebrow {
             display: inline-block;
             font-size: 13px;
@@ -118,7 +118,7 @@
         }
         .svc-hero-link:hover, .svc-hero-link:focus { color: var(--svc-gold); border-color: var(--svc-gold); text-decoration: none; }
 
-        /* ================= BOUTONS ================= */
+        /* ================= BUTTONS ================= */
         .btn-svc-primary {
             display: inline-block;
             background-color: var(--svc-gold);
@@ -157,7 +157,7 @@
         }
         .btn-svc-outline:hover, .btn-svc-outline:focus { border-color: var(--svc-gold); color: var(--svc-gold); text-decoration: none; }
 
-        /* ================= SECTIONS GÉNÉRIQUES ================= */
+        /* ================= GENERIC SECTIONS ================= */
         .svc-section { padding: 100px 0; }
         .svc-section--dark { background-color: var(--svc-dark); }
         .svc-section--light { background-color: #f7f6f4; }
@@ -195,7 +195,7 @@
         }
         .svc-section-heading p { color: rgba(255,255,255,.72); margin: 0; }
 
-        /* ================= ACCOMPAGNEMENT (timeline) ================= */
+        /* ================= PROCESS (timeline) ================= */
         .svc-steps { max-width: 740px; margin: 0 auto; position: relative; }
         .svc-steps::before {
             content: "";
@@ -230,7 +230,7 @@
         .svc-step-body h3 { color: #fff; font-size: 17px; font-weight: 600; margin: 0 0 8px; }
         .svc-step-body p { color: rgba(255,255,255,.7); font-size: 14px; line-height: 1.7; margin: 0; }
 
-        /* ================= RÉALISATION (cartes) ================= */
+        /* ================= WORK (cards) ================= */
         .svc-card {
             background: rgba(255,255,255,.96);
             border-radius: 14px;
@@ -252,7 +252,7 @@
         .svc-card h4 { color: var(--svc-dark-2); font-size: 16px; font-weight: 700; margin: 0 0 10px; }
         .svc-card p { color: #6b6b6b; font-size: 14px; line-height: 1.7; margin: 0; }
 
-        /* ================= POURQUOI MOI ================= */
+        /* ================= WHY ME ================= */
         @media (min-width: 992px) {
             .svc-why-row { display: flex; align-items: center; }
         }
@@ -280,7 +280,7 @@
         .svc-check-list li:last-child { border-bottom: none; }
         .svc-check-list i { color: #8A2387; margin-top: 3px; }
 
-        /* ================= FORMULES ================= */
+        /* ================= PACKAGES ================= */
         .svc-pricing {
             background: linear-gradient(145deg, #23262b, #2a2d34);
             border: 1px solid rgba(255,255,255,.1);
@@ -383,13 +383,13 @@
                         </div>
                         <div id="main-nav" class="collapse navbar-collapse">
                             <ul class="nav navbar-nav">
-                                <li><a href="index.html">Portfolio</a></li>
+                                <li><a href="index_en.html">Portfolio</a></li>
                                 <li><a href="#accompagnement" class="svc-nav-current">Services</a></li>
-                                <li><a href="#realisation" class="scroll-link">Réalisation</a></li>
-                                <li><a href="#pourquoi" class="scroll-link">Pourquoi moi</a></li>
-                                <li><a href="#formules" class="scroll-link">Formules</a></li>
+                                <li><a href="#realisation" class="scroll-link">Work</a></li>
+                                <li><a href="#pourquoi" class="scroll-link">Why me</a></li>
+                                <li><a href="#formules" class="scroll-link">Packages</a></li>
                                 <li><a href="#contact-cta" class="scroll-link">Contact</a></li>
-                                <li><a href="./services_en.html" class="scroll-link">English</a></li>
+                                <li><a href="./services.html" class="scroll-link">Français</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -403,74 +403,74 @@
             <section class="svc-hero" id="hero">
                 <div class="container">
                     <div class="svc-hero-content">
-                        <p class="svc-eyebrow">Développement web</p>
-                        <h1>De l'idée à la mise en ligne, <em>votre site web</em> sur mesure</h1>
-                        <p class="svc-hero-text">Étudiant en BUT Informatique, je conçois et développe des portfolios et site web — avec un accompagnement clair à chaque étape du projet.</p>
+                        <p class="svc-eyebrow">Web development</p>
+                        <h1>From idea to launch, <em>your website</em>, made to measure</h1>
+                        <p class="svc-hero-text">Computer Science student, I design and build portfolios and websites — with clear guidance at every step of the project.</p>
                         <div class="svc-hero-actions">
-                            <a href="#contact-cta" class="btn-svc-primary">Discutons de votre projet</a>
-                            <a href="#realisation" class="svc-hero-link">Voir ce que je fais <i class="fa fa-angle-down"></i></a>
+                            <a href="#contact-cta" class="btn-svc-primary">Let's talk about your project</a>
+                            <a href="#realisation" class="svc-hero-link">See what I do <i class="fa fa-angle-down"></i></a>
                         </div>
                     </div>
                 </div>
             </section>
 
 
-            <!-- RÉALISATION -->
+            <!-- WORK -->
             <section class="svc-section svc-section--photo" id="realisation">
                 <div class="container">
                     <div class="svc-section-heading svc-reveal">
-                        <h4>Réalisation</h4>
+                        <h4>What I Build</h4>
                         <div class="line-dec"></div>
-                        <p>Le type de site qui correspond à votre besoin, pensé pour tous les écrans.</p>
+                        <p>The type of site that matches your needs, designed for every screen.</p>
                     </div>
                     <div class="row svc-reveal">
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="svc-card">
                                 <div class="svc-card-icon"><i class="fa fa-desktop"></i></div>
-                                <h4>Site vitrine</h4>
-                                <p>Présentez votre activité, vos services et vos coordonnées sur un site clair et responsive.</p>
+                                <h4>Showcase Website</h4>
+                                <p>Present your business, services, and contact details on a clear, responsive website.</p>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="svc-card">
                                 <div class="svc-card-icon"><i class="fa fa-briefcase"></i></div>
                                 <h4>Portfolio</h4>
-                                <p>Mettez en valeur vos projets, votre parcours et vos compétences — comme celui-ci.</p>
+                                <p>Showcase your projects, background, and skills — like this one.</p>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="svc-card">
                                 <div class="svc-card-icon"><i class="fa fa-rocket"></i></div>
-                                <h4>Landing page</h4>
-                                <p>Une page unique et efficace pour présenter un produit, un événement ou une offre.</p>
+                                <h4>Landing Page</h4>
+                                <p>A single, effective page to present a product, event, or offer.</p>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="svc-card">
                                 <div class="svc-card-icon"><i class="fa fa-refresh"></i></div>
-                                <h4>Refonte &amp; modernisation</h4>
-                                <p>Votre site a vieilli ? Je le modernise : design, performance et ergonomie.</p>
+                                <h4>Redesign &amp; Modernization</h4>
+                                <p>Is your site looking outdated? I modernize it: design, performance, and usability.</p>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="svc-card">
                                 <div class="svc-card-icon"><i class="fa fa-upload"></i></div>
-                                <h4>Mise en ligne</h4>
-                                <p>Je m'occupe de la mise en ligne de votre site, avec un accompagnement personnalisé.</p>
+                                <h4>Deployment</h4>
+                                <p>I take care of getting your site online, with personalized support.</p>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="svc-card">
                                 <div class="svc-card-icon"><i class="fa fa-wrench"></i></div>
-                                <h4>Correction & évolutions</h4>
-                                <p>Mises à jour, corrections : je reste disponible après la mise en ligne.</p>
+                                <h4>Fixes &amp; Updates</h4>
+                                <p>Updates, fixes: I stay available after launch.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- POURQUOI MOI -->
+            <!-- WHY ME -->
             <section class="svc-section svc-section--light" id="pourquoi">
                 <div class="container">
                     <div class="row svc-why-row">
@@ -480,69 +480,69 @@
                             </div>
                         </div>
                         <div class="col-md-7 svc-reveal">
-                            <p class="svc-eyebrow svc-eyebrow--dark">Pourquoi travailler avec moi</p>
-                            <h2>Un développeur impliqué, du premier brief à la mise en ligne</h2>
+                            <p class="svc-eyebrow svc-eyebrow--dark">Why work with me</p>
+                            <h2>A dedicated developer, from the first brief to launch</h2>
                             <ul class="svc-check-list">
-                                <li><i class="fa fa-check-circle"></i> Étudiant en BUT Informatique (data &amp; développement web) à l'IUT de Lannion</li>
-                                <li><i class="fa fa-check-circle"></i> Plusieurs langages &amp; outils maîtrisés : HTML/CSS/JS, PHP, Vue.JS, Tailwind CSS</li>
-                                <li><i class="fa fa-check-circle"></i> Des tarifs adaptés aux petits projets, associations et indépendants</li>
-                                <li><i class="fa fa-check-circle"></i> Réactif, à l'écoute, et un code propre</li>
+                                <li><i class="fa fa-check-circle"></i> Computer Science student (data &amp; web development) at IUT Lannion</li>
+                                <li><i class="fa fa-check-circle"></i> Proficient in several languages &amp; tools: HTML/CSS/JS, PHP, Vue.JS, Tailwind CSS</li>
+                                <li><i class="fa fa-check-circle"></i> Rates tailored to small projects, nonprofits, and freelancers</li>
+                                <li><i class="fa fa-check-circle"></i> Responsive, attentive, and clean code</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- FORMULES -->
+            <!-- PACKAGES -->
             <section class="svc-section svc-section--dark" id="formules">
                 <div class="container">
                     <div class="svc-section-heading svc-reveal">
-                        <h4>Formules</h4>
+                        <h4>Packages</h4>
                         <div class="line-dec"></div>
-                        <p>Trois points de départ possibles — chaque projet reste sur devis, ajusté à votre besoin.</p>
+                        <p>Three possible starting points — every project is quoted individually, tailored to your needs.</p>
                     </div>
                     <div class="row svc-reveal">
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="svc-pricing">
-                                <h3>Vitrine / Portfolio</h3>
-                                <p class="svc-pricing-tag">Sur devis</p>
+                                <h3>Showcase / Portfolio</h3>
+                                <p class="svc-pricing-tag">Custom quote</p>
                                 <ul>
-                                    <li><i class="fa fa-check"></i> Design responsive</li>
-                                    <li><i class="fa fa-check"></i> Plusieurs sections</li>
-                                    <li><i class="fa fa-check"></i> Formulaire de contact</li>
-                                    <li><i class="fa fa-check"></i> Référencement de base</li>
-                                    <li><i class="fa fa-check"></i> Mise en ligne</li>
+                                    <li><i class="fa fa-check"></i> Responsive design</li>
+                                    <li><i class="fa fa-check"></i> Multiple sections</li>
+                                    <li><i class="fa fa-check"></i> Contact form</li>
+                                    <li><i class="fa fa-check"></i> Basic SEO</li>
+                                    <li><i class="fa fa-check"></i> Deployment</li>
                                 </ul>
-                                <a href="#contact-cta" class="btn-svc-outline">Demander un devis</a>
+                                <a href="#contact-cta" class="btn-svc-outline">Request a quote</a>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="svc-pricing svc-pricing--highlight">
-                                <span class="svc-pricing-badge">Le plus complet</span>
+                                <span class="svc-pricing-badge">Most complete</span>
                                 <h3>Landing Page</h3>
-                                <p class="svc-pricing-tag">Sur devis</p>
+                                <p class="svc-pricing-tag">Custom quote</p>
                                 <ul>
-                                    <li><i class="fa fa-check"></i> Charte graphique</li>
-                                    <li><i class="fa fa-check"></i> Design responsive</li>
-                                    <li><i class="fa fa-check"></i> Plusieurs pages</li>
-                                    <li><i class="fa fa-check"></i> Formulaire de contact</li>
-                                    <li><i class="fa fa-check"></i> Mise en ligne</li>
+                                    <li><i class="fa fa-check"></i> Visual identity / style guide</li>
+                                    <li><i class="fa fa-check"></i> Responsive design</li>
+                                    <li><i class="fa fa-check"></i> Multiple pages</li>
+                                    <li><i class="fa fa-check"></i> Contact form</li>
+                                    <li><i class="fa fa-check"></i> Deployment</li>
                                 </ul>
-                                <a href="#contact-cta" class="btn-svc-primary">Demander un devis</a>
+                                <a href="#contact-cta" class="btn-svc-primary">Request a quote</a>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="svc-pricing">
                                 <h3>Maintenance</h3>
-                                <p class="svc-pricing-tag">Sur devis</p>
+                                <p class="svc-pricing-tag">Custom quote</p>
                                 <ul>
-                                    <li><i class="fa fa-check"></i> Modifications du Design</li>
-                                    <li><i class="fa fa-check"></i> Corrections &amp; mises à jour</li>
-                                    <li><i class="fa fa-check"></i> Évolutions</li>
-                                    <li><i class="fa fa-check"></i> Suivi &amp; disponibilité</li>
-                                    <li><i class="fa fa-check"></i> Ponctuel ou récurrent</li>
+                                    <li><i class="fa fa-check"></i> Design updates</li>
+                                    <li><i class="fa fa-check"></i> Fixes &amp; updates</li>
+                                    <li><i class="fa fa-check"></i> New features</li>
+                                    <li><i class="fa fa-check"></i> Follow-up &amp; availability</li>
+                                    <li><i class="fa fa-check"></i> One-off or recurring</li>
                                 </ul>
-                                <a href="#contact-cta" class="btn-svc-outline">Demander un devis</a>
+                                <a href="#contact-cta" class="btn-svc-outline">Request a quote</a>
                             </div>
                         </div>
                     </div>
@@ -553,9 +553,9 @@
             <section class="svc-contact" id="contact-cta">
                 <div class="container">
                     <div class="svc-section-heading svc-reveal">
-                        <h4>Un projet en tête ?</h4>
+                        <h4>Have a project in mind?</h4>
                         <div class="line-dec"></div>
-                        <p>Racontez-moi votre projet, je reviens vers vous rapidement.</p>
+                        <p>Tell me about your project, and I'll get back to you quickly.</p>
                     </div>
                     <div class="row">
                         <div class="col-md-5 svc-reveal">
@@ -568,19 +568,19 @@
                         </div>
                         <div class="col-md-7 svc-reveal">
                             <form id="devis-form" class="svc-form" action="https://formspree.io/f/movepgbn" method="POST">
-                                <input name="name" type="text" placeholder="Votre nom..." aria-label="Votre nom" required>
-                                <input name="email" type="email" placeholder="Votre email..." aria-label="Votre email" required>
-                                <select name="project_type" aria-label="Type de projet">
-                                    <option value="">Type de projet (optionnel)</option>
-                                    <option value="Site vitrine">Site vitrine</option>
+                                <input name="name" type="text" placeholder="Your name..." aria-label="Your name" required>
+                                <input name="email" type="email" placeholder="Your email..." aria-label="Your email" required>
+                                <select name="project_type" aria-label="Project type">
+                                    <option value="">Project type (optional)</option>
+                                    <option value="Site vitrine">Showcase website</option>
                                     <option value="Portfolio">Portfolio</option>
                                     <option value="Landing page">Landing page</option>
-                                    <option value="Refonte">Refonte de site existant</option>
-                                    <option value="Sur mesure">Projet sur mesure</option>
-                                    <option value="Autre">Autre</option>
+                                    <option value="Refonte">Redesign of an existing site</option>
+                                    <option value="Sur mesure">Custom project</option>
+                                    <option value="Autre">Other</option>
                                 </select>
-                                <textarea name="message" rows="5" placeholder="Votre projet en quelques mots..." aria-label="Votre message" required></textarea>
-                                <button type="submit">Envoyer ma demande</button>
+                                <textarea name="message" rows="5" placeholder="Tell me about your project in a few words..." aria-label="Your message" required></textarea>
+                                <button type="submit">Send my request</button>
                             </form>
                         </div>
                     </div>
@@ -595,13 +595,13 @@
                     <div class="col-md-4 col-sm-12">
                         <div class="logo">
                             <a class="logo-ft" href="index.html"><em>L</em>efranc <em>R</em>omain</a>
-                            <p>Etudiant 3ème année en BUT Informatique
+                            <p>3rd-year Computer Science student
                         <br>IUT Lannion</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-12">
                         <div class="location">
-                            <h4>Localisation</h4>
+                            <h4>Location</h4>
                             <ul>
                                 <li>Rennes 35000</li>
                                 <li>Lannion 22300</li>
@@ -610,16 +610,16 @@
                     </div>
                     <div class="col-md-3 col-sm-12">
                         <div class="contact-info">
-                            <h4>Plus d'Infos</h4>
+                            <h4>More Info</h4>
                             <ul>
-                                <li><em>Telephone</em>: +33 6 67 27 48 65</li>
+                                <li><em>Phone</em>: +33 6 67 27 48 65</li>
                                 <li><em>Email</em>: lefranc.romain@outlook.com</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-2 col-sm-15">
                         <div class="connect-us">
-                            <h4>Mes Réseaux</h4>
+                            <h4>My Networks</h4>
                             <ul>
                                 <li><a href="https://www.linkedin.com/in/romain-lefranc-723712354/"><i class="fa fa-linkedin"></i></a></li>
                                 <li><a href="https://github.com/Romain-lfr"><i class="fa fa-github"></i></a></li>
