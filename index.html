@@ -23,173 +23,7 @@
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
         <style>
-        /* ===== Bloc "Services" — renvoie vers services.html ===== */
-        .svc-teaser {
-            background: linear-gradient(135deg, #1e2025 0%, #2a2d34 100%);
-            padding: 110px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        .svc-teaser::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 3px;
-            background: linear-gradient(45deg, #F27121, #E94057, #8A2387);
-        }
-        .svc-teaser-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 60px;
-            flex-wrap: wrap;
-        }
-        .svc-teaser-text { flex: 1 1 420px; min-width: 300px; }
-        .svc-teaser-eyebrow {
-            display: block;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #f7c552;
-            margin-bottom: 14px;
-        }
-        .svc-teaser-text h3 {
-            color: #fff;
-            font-size: 34px;
-            font-weight: 800;
-            line-height: 1.25;
-            margin: 0 0 18px;
-        }
-        .svc-teaser-text p {
-            color: rgba(255,255,255,.78);
-            font-size: 16px;
-            line-height: 1.8;
-            max-width: 520px;
-            margin: 0 0 32px;
-        }
-        .svc-teaser-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background-color: #f7c552;
-            color: #21272c !important;
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            padding: 16px 32px;
-            border-radius: 30px;
-            text-decoration: none;
-            transition: transform .3s ease, box-shadow .3s ease;
-            box-shadow: 0 12px 26px rgba(247,197,82,.25);
-        }
-        .svc-teaser-btn:hover, .svc-teaser-btn:focus {
-            transform: translateY(-3px);
-            color: #21272c !important;
-            text-decoration: none;
-            box-shadow: 0 16px 32px rgba(247,197,82,.35);
-        }
 
-        /* Pile de photos qui tournent — "mes sites" */
-        .svc-teaser-showcase {
-            position: relative;
-            flex: 0 0 380px;
-            width: 380px;
-            height: 300px;
-        }
-        .svc-slide {
-            position: absolute;
-            inset: 0;
-            border-radius: 14px;
-            overflow: hidden;
-            box-shadow: 0 18px 40px rgba(0,0,0,.45);
-            border: 4px solid #fff;
-            animation: svcStackRotate 9s ease-in-out infinite;
-            animation-fill-mode: both;
-        }
-        .svc-teaser-showcase:hover .svc-slide { animation-play-state: paused; }
-        .svc-slide:nth-child(1) { animation-delay: 0s; }
-        .svc-slide:nth-child(2) { animation-delay: -3s; }
-        .svc-slide:nth-child(3) { animation-delay: -6s; }
-        .svc-slide a {
-            display: block;
-            width: 100%; height: 100%;
-            position: relative;
-        }
-        .svc-slide a:focus-visible {
-            outline: 2px solid #f7c552;
-            outline-offset: -2px;
-        }
-        .svc-slide img {
-            width: 100%; height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform .5s ease;
-        }
-        .svc-slide a:hover img, .svc-slide a:focus img { transform: scale(1.06); }
-        .svc-slide-label {
-            position: absolute;
-            left: 14px; bottom: 14px;
-            background: rgba(20,20,24,.75);
-            color: #fff;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: .5px;
-            padding: 6px 14px;
-            border-radius: 20px;
-            -webkit-backdrop-filter: blur(4px);
-            backdrop-filter: blur(4px);
-            transition: opacity .25s ease;
-        }
-        .svc-slide-hint {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background: rgba(20,20,24,0);
-            color: #fff;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: .5px;
-            text-transform: uppercase;
-            opacity: 0;
-            transition: opacity .3s ease, background .3s ease;
-        }
-        .svc-slide a:hover .svc-slide-hint,
-        .svc-slide a:focus .svc-slide-hint {
-            opacity: 1;
-            background: rgba(20,20,24,.55);
-        }
-        .svc-slide a:hover .svc-slide-label,
-        .svc-slide a:focus .svc-slide-label {
-            opacity: 0;
-        }
-        @keyframes svcStackRotate {
-            0%      { transform: translate(0,0) scale(1) rotate(0deg); z-index: 3; }
-            33.333% { transform: translate(-18px, 10px) scale(.9) rotate(-6deg); z-index: 2; }
-            66.666% { transform: translate(18px, 10px) scale(.9) rotate(6deg); z-index: 1; }
-            100%    { transform: translate(0,0) scale(1) rotate(0deg); z-index: 3; }
-        }
-
-        @media (max-width: 991px) {
-            .svc-teaser-inner { flex-direction: column; text-align: center; }
-            .svc-teaser-text { text-align: center; }
-            .svc-teaser-text p { margin-left: auto; margin-right: auto; }
-            .svc-teaser-showcase { flex-basis: 100%; width: 100%; max-width: 380px; margin: 20px auto 0; }
-        }
-        @media (max-width: 480px) {
-            .svc-teaser-showcase { height: 240px; }
-            .svc-teaser-text h3 { font-size: 26px; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .svc-slide { animation: none; }
-            .svc-slide:nth-child(1) { transform: translate(0,0) scale(1) rotate(0deg); z-index: 3; }
-            .svc-slide:nth-child(2) { transform: translate(-18px, 10px) scale(.9) rotate(-6deg); z-index: 2; }
-            .svc-slide:nth-child(3) { transform: translate(18px, 10px) scale(.9) rotate(6deg); z-index: 1; }
-        }
         </style>
     </head>
     <body>
@@ -1266,24 +1100,62 @@
 
             <div id="contact-us">
                 <div class="container">
-                    <div class="section-heading">
+                    <div class="contact-head">
                         <h4>Me contacter</h4>
-                        <div class="pop-button">
-                            <h4>M'envoyer un message</h4>
-                        </div>
+                        <div class="line-dec"></div>
+                        <p>Une question, une opportunité de stage ou d'alternance, un projet ? N'hésitez pas à m'écrire, je réponds rapidement.</p>
                     </div>
-            
-                    <div class="pop">
-                        <span>✖</span>
-                        <form id="contact" action="https://formspree.io/f/movepgbn" method="POST">
-                            <input name="name" type="text" placeholder="Votre nom..." required>
-                            <input name="email" type="email" placeholder="Votre email..." required>
-                            <textarea name="message" rows="6" placeholder="Votre message..." required></textarea>
-                            <button type="submit" class="btn">Envoyer</button>
-                        </form>
+
+                    <div class="contact-grid">
+                        <div class="contact-cards">
+                            <a class="contact-card" href="mailto:lefranc.romain@outlook.com">
+                                <div class="icon"><i class="fa fa-envelope"></i></div>
+                                <div><small>Email</small><span class="value">lefranc.romain@outlook.com</span></div>
+                            </a>
+                            <a class="contact-card" href="tel:+33667274865">
+                                <div class="icon"><i class="fa fa-phone"></i></div>
+                                <div><small>Téléphone</small><span class="value">+33 6 67 27 48 65</span></div>
+                            </a>
+                            <div class="contact-card">
+                                <div class="icon"><i class="fa fa-map-marker"></i></div>
+                                <div><small>Localisation</small><span class="value">Rennes (35) · IUT de Lannion (22)</span></div>
+                            </div>
+                            <div class="contact-social">
+                                <a href="https://www.linkedin.com/in/romain-lefranc-723712354/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://github.com/Romain-lfr" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa fa-github"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="contact-form-wrap">
+                            <div class="contact-form-box">
+                                <h5>M'envoyer un message</h5>
+                                <form id="contact-form" action="https://formspree.io/f/movepgbn" method="POST">
+                                    <div class="form-row-2">
+                                        <div class="field">
+                                            <label for="cf-name">Nom</label>
+                                            <input id="cf-name" name="name" type="text" placeholder="Votre nom" required>
+                                        </div>
+                                        <div class="field">
+                                            <label for="cf-email">Email</label>
+                                            <input id="cf-email" name="email" type="email" placeholder="vous@exemple.com" required>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label for="cf-subject">Objet</label>
+                                        <input id="cf-subject" name="subject" type="text" placeholder="Objet de votre message">
+                                    </div>
+                                    <div class="field">
+                                        <label for="cf-message">Message</label>
+                                        <textarea id="cf-message" name="message" rows="6" placeholder="Votre message..." required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn-send">Envoyer <i class="fa fa-paper-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
 
 
             
