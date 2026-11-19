@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           max-connections: 1
-          server-dir: ./public_html/Portfolio/
+          server-dir: ./public_html/portfolio/
           exclude: |
             **/.git*
             **/.git*/**
